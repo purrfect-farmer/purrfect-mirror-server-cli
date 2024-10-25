@@ -47,14 +47,14 @@ function createSyncServer() {
 
 createSyncServer()
   .then(({ addresses }) => {
-    console.log(chalk.bold.green("Sync Server is up and running\n"));
+    console.log(chalk.bold.green("Purrfect Server is up and running\n"));
 
     addresses.forEach((address) => {
       console.log(`${chalk.blue("[ADDR]")} ${chalk.bold.yellow(address)}`);
     });
   })
   .catch((e) => {
-    console.log(chalk.bold.red("Failed to Start Sync Server\n"));
+    console.log(chalk.bold.red("Failed to Start Purrfect Server\n"));
 
     console.log(
       chalk.yellow(
