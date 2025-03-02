@@ -1,5 +1,5 @@
 {
-  "name": "purrfect-sync-server",
+  "name": "purrfect-mirror",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "node index.js",
     "build": "npm-run-all build:*",
     "build:pkg": "pkg .",
-    "build:esbuild": "esbuild --bundle --platform=node index.js --outfile=dist/purrfect-sync-server-node"
+    "build:esbuild": "esbuild --bundle --platform=node index.js --outfile=dist/purrfect-mirror-node"
   },
   "bin": "index.js",
   "pkg": {
