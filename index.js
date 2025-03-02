@@ -47,14 +47,16 @@ function createSyncServer() {
 
 createSyncServer()
   .then(({ addresses }) => {
-    console.log(pc.bold(pc.green("Purrfect Server is up and running\n")));
+    console.log(
+      pc.bold(pc.green("Purrfect Mirror Server is up and running\n"))
+    );
 
     addresses.forEach((address) => {
       console.log(`${pc.blue("[ADDR]")} ${pc.bold(pc.yellow(address))}`);
     });
   })
   .catch((e) => {
-    console.log(pc.bold(pc.red("Failed to Start Purrfect Server\n")));
+    console.log(pc.bold(pc.red("Failed to Start Purrfect Mirror Server\n")));
 
     console.log(
       pc.yellow(
