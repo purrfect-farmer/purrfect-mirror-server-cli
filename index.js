@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const chalk = require("chalk");
+const pc = require("picocolors");
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 const { networkInterfaces } = require("os");
@@ -47,17 +47,17 @@ function createSyncServer() {
 
 createSyncServer()
   .then(({ addresses }) => {
-    console.log(chalk.bold.green("Purrfect Server is up and running\n"));
+    console.log(pc.bold(pc.green("Purrfect Server is up and running\n")));
 
     addresses.forEach((address) => {
-      console.log(`${chalk.blue("[ADDR]")} ${chalk.bold.yellow(address)}`);
+      console.log(`${pc.blue("[ADDR]")} ${pc.bold(pc.yellow(address))}`);
     });
   })
   .catch((e) => {
-    console.log(chalk.bold.red("Failed to Start Purrfect Server\n"));
+    console.log(pc.bold(pc.red("Failed to Start Purrfect Server\n")));
 
     console.log(
-      chalk.yellow(
+      pc.yellow(
         "Please ensure the server isn't running already.\nYou should restart your device if the problem persists. \n"
       )
     );
